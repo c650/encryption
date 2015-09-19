@@ -1,4 +1,5 @@
 require "colored"
+$keywords = ["mine","the","if","of","me","you","on","off","first","last","maybe","yes","no","it","but","that","this","there","their","they"]
 require_relative "./methods.rb"
 puts "Input phrase to force decrypt:".red
 phrase = gets.chomp
