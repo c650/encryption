@@ -11,5 +11,5 @@ def encrypt(key, phrase) #encryption method
   phrase.tr("a-z",rearrange(key)).tr("A-Z",rearrange(key).upcase)
 end
 def decrypt(key, phrase) #decryption method
-  phrase.tr(rearrange(key),"a-z").tr(rearrange(key).upcase,"A-Z")
+	encrypt(((key * -1) + 26),phrase)
 end
