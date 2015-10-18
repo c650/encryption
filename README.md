@@ -7,3 +7,5 @@ Now with commandline options!
 	
 	-k for key
 	-m for phrase
+
+Just added a less feature-filled, but faster, version coded in Rust.
