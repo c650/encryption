@@ -52,8 +52,8 @@ fn main() {
 		.ok()
 		.expect("Invalid Key");
 	// convert key to a value between 0 and 25, and make key immutable
-	if key >= 26 {
-		key -= 26
+	while (key >= 26) {
+		key = key - 26;
 	}
 	let mut encrypted = encrypt(user_input, key);
 	println!("{}", encrypted);
