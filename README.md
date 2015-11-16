@@ -9,3 +9,17 @@ Now with commandline options!
 	-m for phrase
 
 Just added a less feature-filled, but faster, version coded in Rust.
+
+Currently, you use it like so:
+
+To encrypt: 
+	
+	ruby /path/to/caesar-cipher.rb encrypt -k <key> -m "<message>"
+	
+To decrypt: 
+
+	ruby /path/to/caesar-cipher.rb decrypt -k <key> -m "<message>"
+
+To brute-decrypt:
+
+	ruby /path/to/caesar-cipher.rb brute-decrypt -m "<message>"
