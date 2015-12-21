@@ -9,8 +9,9 @@ Now with commandline options!
 	-m for phrase
 
 Added less feature-packed versions in Rust and Swift for your amusement. 
+I recommend using the Ruby version, though.
 
-## Gem Dependencies for the Ruby Version:
+## Gem Dependencies (Ruby Version):
 	
 	trollop
 	colored
@@ -18,3 +19,18 @@ Added less feature-packed versions in Rust and Swift for your amusement.
 Do (for both):
 
 	gem install <gem>
+
+
+## Usage:
+
+To encrypt: 
+	
+	ruby /path/to/caesar-cipher.rb encrypt -k <key> -m "<message>"
+	
+To decrypt: 
+
+	ruby /path/to/caesar-cipher.rb decrypt -k <key> -m "<message>"
+
+To brute-decrypt:
+
+	ruby /path/to/caesar-cipher.rb brute-decrypt -m "<message>"
