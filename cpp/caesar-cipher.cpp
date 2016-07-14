@@ -1,9 +1,9 @@
 #include <vector>
+#include <string>
 #include <iostream>
-#include <algorithm>
 
 int main() {
-    std::string s; std::cin >> s;
+    std::string s; std::getline(std::cin, s);
     int k; std::cin >> k;
 
     for (auto& c : s) {
