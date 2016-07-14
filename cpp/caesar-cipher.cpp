@@ -3,7 +3,6 @@
 #include <algorithm>
 
 int main() {
-    int n; std::cin >> n;
     std::string s; std::cin >> s;
     int k; std::cin >> k;
 
