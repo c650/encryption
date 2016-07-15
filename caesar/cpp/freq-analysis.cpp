@@ -1,6 +1,8 @@
 #include "./encrypt.cpp"
 
 #define REG_MAX 4 // the index of 'e' in alpha ('a' = 0)
+#define RED "\033[0;31m"
+#define WHITE "\033[0;39m"
 
 int main() {
 	std::string s; std::getline(std::cin, s);
@@ -10,6 +12,7 @@ int main() {
 	/*
 		Collect frequencies
 	*/
+	std::cout << RED << "\n[*] Collecting frequencies...\n";
 	for (auto& c : s) {
 		if (c >= 'a' && c <= 'z') {
 			freq[c - 'a']++;
@@ -18,6 +21,7 @@ int main() {
 		}
 	}
 
+	std::cout << "\n[*] Approximating Key...\n";
 	unsigned int max_idx = 0;
 	for (int i = 1; i < 26; i++) {
 		if (freq[i] > freq[max_idx]) {
@@ -30,5 +34,8 @@ int main() {
 		key += 26;
 	}
 
-	std::cout << Caesar::decrypt(s, key) << std::endl;
+	std::cout << "\n[*] Key found: " << key 
+		<< "\n\n[*] Decrypting... \n\n" << std::endl;
+
+	std::cout << WHITE << Caesar::decrypt(s, key) << std::endl;
 }

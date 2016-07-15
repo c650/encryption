@@ -10,21 +10,19 @@ namespace Vigenere {
 		std::vector<int> k(key.length());
 
 		int key_len = key.length();
-		int str_len = str.length();
 
 		int i;
 		for (i = 0; i < key_len; i++) {
 			k[i] = tolower(key[i]) - 'a';
 		}
 
-		char sub;
-		for (i = 0; i < str_len; i++) {
-			if (islower(s[i])) {
-				sub = 'a';
-			} else if (isupper(s[i])) {
-				sub = 'A';
+		i = 0;
+		for (auto& c : s) {
+			if (islower(c)) {
+				c = (c - 'a' + k[i++ % key_len]) % 26 + 'a';
+			} else if (isupper(c)) {
+				c = (c - 'A' + k[i++ % key_len]) % 26 + 'A';
 			}
-			s[i] = (s[i] - sub + k[i % key_len]) % 26 + sub;
 		}
 
 		return s;
