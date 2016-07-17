@@ -2,7 +2,7 @@
 
 #define REG_MAX 4 // the index of 'e' in alpha ('a' = 0)
 #define RED "\033[0;31m"
-#define WHITE "\033[0;39m"
+#define NORMAL "\033[0;39m"
 
 int main() {
 	std::string s; std::getline(std::cin, s);
@@ -37,5 +37,5 @@ int main() {
 	std::cout << "\n[*] Key found: " << key 
 		<< "\n\n[*] Decrypting... \n\n" << std::endl;
 
-	std::cout << WHITE << Caesar::decrypt(s, key) << std::endl;
+	std::cout << NORMAL << Caesar::decrypt(s, key) << std::endl;
 }
