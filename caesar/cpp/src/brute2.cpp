@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
 	    	<< NORMAL << argv[1] << std::endl;
     }
 
-    std::pair<int,int> max_found(0,0);
+    std::pair<int,int> max_found(0,0); // key, num_found
     std::string tmp;
     int found;
     std::cout << RED << "[*] Scanning brute forces...\n" << NORMAL;
