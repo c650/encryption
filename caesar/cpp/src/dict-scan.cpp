@@ -26,8 +26,8 @@ namespace DictionaryScanner {
 		return true;
 	}
 
-	bool find (const std::string& text, const std::string& s) {
-		size_t text_len = text.length(), s_len = s.length();
+	static bool find (const std::string& text, const std::string& s) {
+		int text_len = text.length(), s_len = s.length();
 
 		int j,k;
 		for (int i = 0; i < text_len; i++) {
