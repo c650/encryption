@@ -18,7 +18,9 @@ namespace Caesar {
 				base = 'a';
 	        } else if (c >= 'A' && c <= 'Z') {
 				base = 'A';
-	        }
+	        } else {
+				continue;
+			}
 			c = ((c - base + key) % 26) + base;
 	    }
 
@@ -26,6 +28,8 @@ namespace Caesar {
 	}
 
 	std::string decrypt(const std::string& str, const int& key) {
-	    return encrypt(str, 26 - key);
+		if (key < 0)
+			throw std::logic_error("Don't use a negative key!");
+	    return encrypt(str, 26 - key % 26);
 	}
 };
